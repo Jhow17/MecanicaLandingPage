@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import mechanic from '../../../mecanica/public/mechanic.png'
+
 
 import BotaoWhat from './Botoes/BotaoWhat'
 const Hero = () => {
@@ -10,9 +10,9 @@ const Hero = () => {
       <div>
         <Image
         alt="Mecanico trabalhando em um carro"
-        src={mechanic}
+        src={'/mechanic.png'}
         fill
-        sizes='100vw'
+        sizes='100'
         className='object-fill opacity-60 lg:hidden'
 
         />
