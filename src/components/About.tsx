@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import aboutImg from '../../../mecanica/public/oficiniaCima.png'
-import aboutImg1 from '../../../mecanica/public/oficinaDentro.png'
+
 import BotaoWhat from './Botoes/BotaoWhat'
 import { MdPlace } from "react-icons/md";
 import { siteConfig } from '@/site-config/site-config'
@@ -19,7 +18,7 @@ const About = () => {
                 <div className='relative w-full h-[400px] overflow-hidden rounded-md'>
                     <Image
                         alt='Imagem de uma Oficina vista de Cima'
-                        src={aboutImg}
+                        src="/oficiniaCima.png"
                         fill
                         quality={100}
                         priority
@@ -31,7 +30,7 @@ const About = () => {
                 <div className='absolute w-60 h-40 right-4 -bottom-6 rounded-2xl overflow-hidden'>
                     <Image
                         alt='Imagem de uma Oficina vista de Cima'
-                        src={aboutImg1}
+                        src="/oficinaDentro.png"
                         fill
                         quality={100}
                         priority
@@ -47,8 +46,8 @@ const About = () => {
                 <h2 className='text-3xl font-bold uppercase'>Nossa Oficina</h2>
                 <p className='text-base'>Fundada em 2002 na cidade de Boulder, Colorado – nos Estados Unidos, e atuando no Brasil desde 2010, a AUTOTEC é uma Oficina Mecânica Automotiva especializada em veículos nacionais e internacionais.</p>
                 <p className='text-base'>Dispomos de equipamentos de diagnóstico de última geração. Nossa equipe é treinada para oferecer um atendimento ágil e preciso, conquistando a confiança de clientes individuais e também de empresas com frotas variadas de veículos.</p>
-                <div className='flex justify-around mt-4'>
-                    <BotaoWhat>
+                <div className='flex justify-around mt-4 gap-3'>
+                    <BotaoWhat >
                         Contate Nosso Concierge
                     </BotaoWhat>
                     <a href={directionsUrl} target="_blank"  className='bg-red-600 hover:bg-red-700 w-fit font-semibold py-2 px-4 rounded-md text-white flex items-center justify-around gap-2'> Como Chegar

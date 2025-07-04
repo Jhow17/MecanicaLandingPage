@@ -1,9 +1,6 @@
 "use client";
 import React, { useState } from 'react'
-import Miche from '../../../mecanica/public/Michelin-Logo.png'
-import Bosch from '../../../mecanica/public/Bosch-Logo.png'
-import Mobil from '../../../mecanica/public/mobil.png'
-import Pire from '../../../mecanica/public/pirelli.png'
+
 import Contact from './Contact'
 import Image from 'next/image'
 import BotaoWhat from './Botoes/BotaoWhat'
@@ -16,22 +13,22 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
 
-  const partners = [
+ const partners = [
   {
-    name: 'Michelin',
-    logo: Miche
+    name: 'Os melhores pneus',
+    logo: "/Michelin-Logo.png"
   },
   {
-    name: 'Bosch',
-    logo: Bosch
+    name: 'Tecnologia e peças de ponta',
+    logo: "/Bosch-Logo.png"
   },
   {
-    name: 'Mobil',
-    logo: Mobil
+    name: 'Lubrificantes de alta performance',
+    logo: "/mobil.png"
   },
   {
-    name: 'Pirelli',
-    logo: Pire
+    name: 'Performance e segurança em pneus',
+    logo: "/pirelli.png"
   }
 ];
   const [mostraCont, setMostraCont] = useState(false)
@@ -43,14 +40,16 @@ const Footer = () => {
           <h4 className='text-2xl uppercase text-center mb-5 mt-5 '>Parceiros</h4>
           <div className='grid grid-cols-2  lg:grid-cols-4 gap-8'>
             {partners.map((item, idx) => (
-            <div className='bg-white flex flex-col items-center justify-center rounded-sm' key={idx}>
+            <div className='bg-white flex flex-col items-center justify-end rounded-sm text-neutral-950 text-center' key={idx}>
               <Image
               alt={item.name}
               src={item.logo}
+              width={200}
+              height={200}
               priority
               className='w-40 h-30 object-contain'
               />
-              <h5 className='text-2xl uppercase'>{item.name}</h5>
+              <p className='text-lg uppercase'>{item.name}</p>
 
             </div>
 

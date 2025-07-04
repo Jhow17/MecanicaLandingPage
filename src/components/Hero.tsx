@@ -37,7 +37,7 @@ const Hero = () => {
 
           <div className='hidden h-full relative w-full  lg:block '>
              <Image
-                src={mechanic}
+                src="/mechanic.png"
                 alt="Mecanico trabalhando em um carro"
                 className="object-cover  rounded-2xl" 
                 fill
