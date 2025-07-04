@@ -2,7 +2,11 @@ import React from 'react'
 import { BsWhatsapp } from "react-icons/bs";
 import { siteConfig } from '@/site-config/site-config'
 
-const BotaoWhat = ({children}) => {
+
+type BotaoWhatProps = {
+  children: React.ReactNode; // 'children' pode ser qualquer coisa que o React renderiza
+};
+const BotaoWhat = ({ children }: BotaoWhatProps) => {
   return (
     <div>
         <a  href={`https://wa.me/${siteConfig.phone.display}`} target='_blank' className='bg-green-500 hover:bg-green-600 w-fit font-semibold py-2 px-4 rounded-md text-white flex items-center justify-around' > <BsWhatsapp size={24}  />

@@ -5,6 +5,8 @@ import BotaoWhat from './Botoes/BotaoWhat'
 import { MdPlace } from "react-icons/md";
 import { siteConfig } from '@/site-config/site-config'
 
+
+
 const About = () => {
     const urlFormatted = encodeURIComponent(siteConfig.address) 
     const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=SEU+ENDERECO+AQUI${urlFormatted}`;
