@@ -44,10 +44,10 @@ const Footer = () => {
               <Image
               alt={item.name}
               src={item.logo}
-              width={200}
-              height={200}
+              width={100}
+              height={100}
               priority
-              className='w-40 h-30 object-contain'
+              className='w-30 h-20 md:w-40 md:h-30 object-contain'
               />
               <p className='text-lg uppercase'>{item.name}</p>
 

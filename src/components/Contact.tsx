@@ -27,7 +27,7 @@ const Contact = () => {
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    console.log(e.target)
+
     const { name, value } = e.target;
     // esta espalhando o dicionario  antigo e colocando o dicionario usando o spread operator
     setData((prevData) => ({...prevData, [name]: value }));
@@ -37,7 +37,6 @@ const Contact = () => {
     e.preventDefault()
     
     const dados = JSON.stringify(formData)
-    console.log(dados)
     const form = e.target as HTMLFormElement;
 
     const data = new FormData(form);

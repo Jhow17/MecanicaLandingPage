@@ -3,6 +3,11 @@ import { FaRegClock } from "react-icons/fa6";
 
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
+import img1 from '../../../mecanica/public/image (2).png'
+import img2 from '../../../mecanica/public/image (3).png'
+import img3 from '../../../mecanica/public/image (4).png'
+import img4 from '../../../mecanica/public/image (5).png'
+import img5 from '../../../mecanica/public/image (6).png'
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { MdOutlineNavigateBefore } from "react-icons/md";
 
@@ -11,31 +16,31 @@ const servicos = [
     title: "Revisão Geral",
     description: "Analisamos até 85 itens do seu carro, mostrando o que precisa ser feito com urgência e o que pode ser provisionado, montando um plano de manutenção pra você, cuidando assim do seu bolso e do seu carro.",
     time: "6",
-    img: "/image (2).png"
+    img: img1
   },
   {
     title: "Troca de Óleo e Filtros",
     description: "Utilizamos os óleos e filtros recomendados pela montadora, garantindo a lubrificação ideal do motor, prevenindo o desgaste e aumentando a vida útil de todos os componentes internos.",
     time: "1",
-    img: "/image (3).png"
+    img: img2
   },
   {
     title: "Sistema de Freios",
     description: "Verificação completa de pastilhas, discos, fluidos e todo o sistema de frenagem. A sua segurança é nossa prioridade, garantindo uma resposta de frenagem precisa e confiável em qualquer situação.",
     time: "2",
-    img: "/image (4).png"
+    img: img3
   },
   {
     title: "Alinhamento e Balanceamento",
     description: "Corrigimos o ângulo das rodas e eliminamos as vibrações do volante. Um serviço essencial para evitar o desgaste irregular dos pneus, economizar combustível e proporcionar uma direção mais suave.",
     time: "1",
-    img:"/image (5).png"
+    img: img4
   },
   {
     title: "Ar Condicionado",
     description: "Diagnóstico completo, recarga de gás e higienização do sistema de ar condicionado. Respire um ar mais puro e garanta o conforto térmico dentro do seu carro em qualquer estação do ano.",
     time: "2",
-    img: "/image (6).png"
+    img: img5
   }
 ];
 const Services = () => {
@@ -72,7 +77,6 @@ const Services = () => {
                       
                           <Image
                               alt={card.title}
-                              width={300}
                               src={card.img}
                               quality={100}
                               priority
@@ -105,8 +109,8 @@ const Services = () => {
           </div>
 
             
-            <button className="bg-gray-900 flex items-center justify-center rounded-full shadow-lg w-15 h-15 absolute -right-5 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 " onClick={scrollNext}><MdOutlineNavigateNext className="w-10 h-10 text-white"/></button>  
-            <button  className="bg-gray-900 flex items-center justify-center rounded-full shadow-lg w-15 h-15 absolute -left-20 top-1/2  -translate-y-1/2 translate-x-1/2  z-10 " onClick={scrollPrev}><MdOutlineNavigateBefore className="w-10 h-10 text-white"/></button>
+            <button className=" hidden lg:flex bg-gray-900  items-center justify-center rounded-full shadow-lg w-15 h-15 absolute -right-5 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 " onClick={scrollNext}><MdOutlineNavigateNext className="w-10 h-10 text-white"/></button>  
+            <button  className=" hidden lg:flex bg-gray-900  items-center justify-center rounded-full shadow-lg w-15 h-15 absolute -left-20 top-1/2  -translate-y-1/2 translate-x-1/2  z-10 " onClick={scrollPrev}><MdOutlineNavigateBefore className="w-10 h-10 text-white"/></button>
             
 
         </div>
