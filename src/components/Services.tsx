@@ -67,28 +67,33 @@ const Services = () => {
               
               {/* {} precisa de return enquanto () retorna sozinho */}
               {servicos.map((card, idx) => (
-                <div key={idx} className='flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3'>
-                  <article className='bg-neutral-800 text-white space-y-6 h-full p-6 rounded-sm'>
-                    <div className='flex flex-col space-y-6 justify-around items-center'>
+                <div key={idx} className='flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)]  px-3'>
+                  <article className='bg-neutral-800 h-full text-white space-y-6  px-2 pt-2 rounded-sm'>
+
+
+                    <div className='relative w-full h-48'>
+
+                      <Image
+                        alt={card.title}
+                        src={card.img}
+                        fill 
+                        quality={100}
+                        priority
+                        className='object-cover hover:scale-105 duration-50' 
+                      />
+                    </div>
+                    
                       
-                          <Image
-                              alt={card.title}
-                              src={card.img}
-                              quality={100}
-                              priority
-                              height={300}
-                              className='rounded-md '
                           
-                          />
-                        <div className='flex flex-1 flex-col gap-4'>
-                          <h3 className='text-2xl'>{card.title}</h3>
-                          <p className='text-sm select-none'>
-                            {card.description}
-                          </p>
-                          <span className="border-t-neutral-800 flex items-center gap-2"> <FaRegClock /> {card.time} h</span>
-                        </div>
+                    <div className='flex flex-1 flex-col gap-4 px-4'>
+                      <h3 className='text-2xl'>{card.title}</h3>
+                      <p className='text-sm select-none'>
+                        {card.description}
+                      </p>
+                      <span className="border-t-neutral-800 flex items-center gap-2"> <FaRegClock /> {card.time} h</span>
+                    </div>
       
-                      </div>
+                      
 
                   </article>
 
