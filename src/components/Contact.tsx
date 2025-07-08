@@ -36,7 +36,7 @@ const Contact = () => {
   const handleSubmit  = async(e: React.FormEvent<HTMLFormElement>) =>{
     e.preventDefault()
     
-    const dados = JSON.stringify(formData)
+
     const form = e.target as HTMLFormElement;
 
     const data = new FormData(form);
